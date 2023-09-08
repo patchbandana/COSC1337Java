@@ -2,9 +2,12 @@
  * COSC 1337 001
  * 2023-09-01
  * Purpose: To practice working with Strings and Random integers (Lab3L2)
- * Insight: 
+ * Insight: The parentheses around the two variables cause them to be added
+ * BEFORE they are appended to the string, Without the parentheses, the variables
+ * are added to the string one at a time.
 */
 package lab3L2;
+
 import java.util.Random;
 
 public class Lab3L2 {
@@ -47,7 +50,14 @@ public class Lab3L2 {
 		//random entities
 		Random random = new Random();
 		System.out.println("Random Boolean: " + random.nextBoolean());
-		
+		System.out.println("Random Double: " + random.nextDouble());
+		for (int i = 0; i < 10; i++)
+			System.out.println("Generating a Random int between " +
+					"7 and 14: " + (random.nextInt(8) + 7));
+			int random1 = random.nextInt(10);
+			int random2 = random.nextInt(10);
+			System.out.println("Random Digits are " + random1 + random2);
+			System.out.println("Random Digits added are " + 
+					(random1 + random2));
 	}
-
 }
