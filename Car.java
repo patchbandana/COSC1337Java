@@ -61,7 +61,7 @@ public class Car {
 	//Methods - data manipulation methods
 	
 	public double getMilesPerGallon() {
-		if (getMilesPerGallon() > 0.001)
+		if (getGallonsOfGas() > 0.001)
 			return getMilesDriven()/getGallonsOfGas();
 		return 0.0;
 	}

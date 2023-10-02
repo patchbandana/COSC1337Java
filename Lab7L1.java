@@ -6,6 +6,8 @@
 package automobiles;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Scanner;
 
 public class Lab7L1 {
 
@@ -16,6 +18,23 @@ public class Lab7L1 {
 		//Print out the mileage per gallon for this Car
 		double mileage = gasGuzzler.getMilesPerGallon();
 		DecimalFormat decimalFormat = new DecimalFormat("0.0");
-		System.out.println();
+		System.out.println("Mileage for this car: " + 
+				decimalFormat.format(mileage) + " mpg.");
+		
+		//Print our the gas cost for this car
+		double totalGasCost = gasGuzzler.getMoneySpentOnGas(2.79);
+		NumberFormat moneyFormatter = NumberFormat.getCurrencyInstance();
+		System.out.println("Gas cost for this car: " +
+				moneyFormatter.format(totalGasCost));
+		
+		//Initialize a scanner and modelName
+		Scanner in = new Scanner(System.in);
+		String modelName = "";
+		
+		//do/while modelName != "done"
+		do {
+			
+		} while (modelName != "done")
+			in.close();
 	}
 }
