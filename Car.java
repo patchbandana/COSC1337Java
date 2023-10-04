@@ -1,20 +1,20 @@
 /*Eman Eizenga
  * COSC 1337 001
- * 2023-09-27
+ * 2023-10-04
  * Purpose: To encapsulate information about a Car including the model,
- * the miles driven, and the amount of gas used. (Lab7L1)
- * Insight: The data would become inconsistent if the derived data was 
- * stored instead of being derived then some of the data that it was
- * based on changed.
+ * the miles driven, and the amount of gas used. (Lab7L2)
  */
 
 package automobiles;
+
+import java.text.DecimalFormat;
 
 public class Car {
 	//Fields
 	private String model;
 	private int milesDriven;
 	private double gallonsOfGas;
+	private DecimalFormat decimalFormat = new DecimalFormat("0.0");
 	
 	//Static Initializers - none
 	
@@ -73,4 +73,20 @@ public class Car {
 	}
 	
 	//Methods - overriden methods
+	@Override
+	public boolean equals(Object o) {
+		if (!(o instanceof Car))
+			return false;
+		Car otherCar = (Car) o;
+		return otherCar.getModel().equals(getModel()) && 
+				otherCar.getMilesDriven() == getMilesDriven() &&
+				otherCar.getGallonsOfGas() == getGallonsOfGas();
+	}
+	@Override
+	public String toString() {
+		return "Car: " + getModel() + "\n\tMiles Driven: " +
+				getMilesDriven() + ". Gase Used: " + decimalFormat.format(getGallonsOfGas())
+				+ " Fuel Efficiency: " +
+				decimalFormat.format(getMilesPerGallon());
+	}
 }
