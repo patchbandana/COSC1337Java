@@ -3,7 +3,9 @@
  * 2023-09-27
  * Purpose: To encapsulate information about a Car including the model,
  * the miles driven, and the amount of gas used. (Lab7L1)
- * Insight: 
+ * Insight: The data would become inconsistent if the derived data was 
+ * stored instead of being derived then some of the data that it was
+ * based on changed.
  */
 
 package automobiles;
