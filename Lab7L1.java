@@ -56,11 +56,13 @@ public class Lab7L1 {
 						+ " mpg.");
 				System.out.println("Gas cost for " + tempCar.getModel() +
 						": " + moneyFormatter.format(tempCar.getMoneySpentOnGas(3.19)));
+				System.out.println();
 				
 				//Throw away white space
 				in.nextLine();
 			}
-		} while (!modelName.equals("done"));
+		} while (!modelName.equalsIgnoreCase("done"));
+			//Close scanner
 			in.close();
 	}
 }
