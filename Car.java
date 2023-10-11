@@ -1,26 +1,27 @@
-/*Eman Eizenga
+/* Eman Eizenga
  * COSC 1337 001
- * 2023-09-27
- * Purpose: To encapsulate information about a Car including the model,
- * the miles driven, and the amount of gas used. (Lab7L1)
- * Insight: The data would become inconsistent if the derived data was 
- * stored instead of being derived then some of the data that it was
- * based on changed.
- */
-
+ * 2023-10-11
+ * Purpose: To encapsulate a Car including a model,
+ *  milesDriven, and the gallons of gas used so far
+ * */
 package automobiles;
 
+import java.text.DecimalFormat;
+
+/**To encapsulate information about a Car including the model,
+ * the miles driven, and the gallons of gas used so far.
+ * @author eeizenga
+ */
 public class Car {
-	//Fields
+	
 	private String model;
 	private int milesDriven;
 	private double gallonsOfGas;
+	private DecimalFormat decFormat = new DecimalFormat("0.0");
 	
-	//Static Initializers - none
 	
-	//Constructors
 	public Car() {
-		setModel("Unknown");
+		setModel("unknown");
 	}
 	
 	public Car(String model, int milesDriven, double gallonsOfGas) {
@@ -29,7 +30,7 @@ public class Car {
 		setGallonsOfGas(gallonsOfGas);
 	}
 	
-	//Methods - getters and setters
+	
 	public String getModel() {
 		return model;
 	}
@@ -43,7 +44,7 @@ public class Car {
 	}
 	
 	public void setMilesDriven(int milesDriven) {
-		if (milesDriven >= 0)
+		if (milesDriven > 0)
 			this.milesDriven = milesDriven;
 		else
 			this.milesDriven = 0;
@@ -54,16 +55,15 @@ public class Car {
 	}
 	
 	public void setGallonsOfGas(double gallonsOfGas) {
-		if (gallonsOfGas >= 0)
+		if (gallonsOfGas > 0)
 			this.gallonsOfGas = gallonsOfGas;
 		else
 			this.gallonsOfGas = 0;
 	}
 	
-	//Methods - data manipulation methods
 	
 	public double getMilesPerGallon() {
-		if (getGallonsOfGas() > 0.001)
+		if (getGallonsOfGas() > .001)
 			return getMilesDriven()/getGallonsOfGas();
 		return 0.0;
 	}
@@ -72,5 +72,18 @@ public class Car {
 		return pricePerGallon*getGallonsOfGas();
 	}
 	
-	//Methods - overriden methods
+
+	public boolean equals(Object o) {
+		if (!(o instanceof Car))
+			return false;
+		Car otherCar = (Car) o ;
+		return otherCar.getModel().equals(getModel()) && otherCar.getMilesDriven() == getMilesDriven() &&
+				otherCar.getGallonsOfGas() == getGallonsOfGas();
+	}
+	
+
+	public String toString() {
+		return "Car:"+getModel()+"\n\tMiles Driven:"+getMilesDriven()+". Gas Used: "+getGallonsOfGas()+
+				" Fuel Efficiency: "+decFormat.format(getMilesPerGallon())+" mpg.";
+	}
 }
