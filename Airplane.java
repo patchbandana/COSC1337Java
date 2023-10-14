@@ -1,15 +1,17 @@
-/* Eman Eizenga
+/* Pat Eizenga
  * COSC 1337 001
  * 2023-10-11
  * Purpose: To encapsulate an Airplane including a model,
- *  milesFlown, and the gallons of fuel used so far
+ *  milesFlown, and the gallons of fuel used so far (Lab7L3)
+ * Insight: The classes could easily be combined since they both
+ * 	have only a model, miles traveled, and an amount of fuel used.
  * */
 package automobiles;
 
 /**A class that encapsulates information about an Airplane including
  * model, the miles flown, and the amount of fuel used. <hr> Some stuff 
  * I want to say
- * @author eeizenga
+ * @author peizenga
  * 
  */
 public class Airplane {
@@ -77,7 +79,8 @@ public class Airplane {
 
 	//data manipulation method for airplane
 	/**Gets the fuel efficiency of this Airplane. Note that if 
-	 * gallonsOfFuel <= .001, this method just returns 0.
+	 * gallonsOfFuel is less than or equal to .001,
+	 * this method just returns 0.
 	 * 
 	 * @return the number of miles per gallon for this Airplane.
 	 */
