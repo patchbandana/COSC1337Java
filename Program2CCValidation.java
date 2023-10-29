@@ -1,15 +1,15 @@
 /*Eman Eizenga
  * COSC 1337 001
  * 2023-10-22
- * Purpose: To validate a credit card number given via user input and process the string's
- * 	information. (Program2CCN)
+ * Purpose: Use's Luhn's algorithm to validate a user given credit card,
+ * allow's the user to keep trying until a valid credit card is entered
+ * and then issues a random PIN from 1111-9999 once successful (Program 2: Credit Card Validation)
  * Insight: 
  */
 
 package creditCard;
 
 import java.util.Scanner;
-import java.text.DecimalFormat;
 import java.util.Random;
 
 public class Program2CCValidation {
@@ -22,9 +22,9 @@ public class Program2CCValidation {
 		boolean validCreditCard = false;       
 
 		//loop while not a valid credit card  
-		while (validCreditCard == false)
+		while (!validCreditCard)
 		{
-			System.out.println("Please enter your credit card number: ");
+			System.out.print("Please enter your credit card number: ");
 			//Get the credit card number as a String - store in potentialCCN (use scanner's nextLine)
 
 			String potentialCCN = scanner.nextLine();
@@ -79,11 +79,11 @@ public class Program2CCValidation {
 				}
 				//end if isOddDigit
 				//Comment in this segment for a useful test output string
-				System.out.print(currentDigit);
-				if (i>=reversedCCN.length()-1)
-					System.out.println();
-				else 
-					System.out.print(" + ");
+				//System.out.print(currentDigit);
+				//if (i>=reversedCCN.length()-1)
+					//System.out.println();
+				//else 
+					//System.out.print(" + ");
 				// add currentDigit to sum and store in sum 
 				sum += currentDigit;
 				//end the for loop that runs from 0 to less than the length of reversed CCN   
@@ -93,13 +93,12 @@ public class Program2CCValidation {
 			//System.out.println("sum:"+sum);
 			//if the last digit of sum + the last Digit ends in a zero, set validCreditCard to true
 			if ((((sum%10)+ lastDigit) % 10) == 0)
-				validCreditCard = true;
+				validCreditCard = !validCreditCard;
 			//end if
 			//if validCreditCard is false, output an appropriate message
-			else 
+			if (!validCreditCard)
 			{
-				validCreditCard = false;
-				System.out.println("Oops! Please enter a valid credit card number: ");
+				System.out.println("Oops! Invalid credit card number.");
 				//end if
 			}
 			//end while that checks for valid credit card
@@ -107,10 +106,9 @@ public class Program2CCValidation {
 		if (validCreditCard)
 		{
 			Random random = new Random();
-			DecimalFormat decimalFormat = new DecimalFormat("0000");
-			int pin = random.nextInt(10000);
+			int pin = random.nextInt(8889) + 1111;
 			//issue a RANDOM PIN and print it out - no more help :)
-			System.out.println("Your new PIN is: " + decimalFormat.format(pin));
+			System.out.println("Your new PIN is: " + pin);
 		}
 		scanner.close();
 	}
