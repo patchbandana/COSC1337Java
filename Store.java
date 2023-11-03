@@ -1,14 +1,14 @@
 /* Eman Eizegna
  * COSC 1337 001
- * 2023-11003
- * Purpose: To encapsulate a store (Lab10L1)
+ * 2023-11-03
+ * Purpose: To encapsulate a store (Lab10L2)
  */
 package typesOfStores;
 
 import java.util.ArrayList;
 
 /**Encapsulates the general idea of a Store*/
-public class Store {
+public abstract class Store {
 	/**the sales tax rate - to be multiplied by every sale*/
 	public final double SALES_TAX_RATE = 0.06;
 
