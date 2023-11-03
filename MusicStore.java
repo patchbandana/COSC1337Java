@@ -1,7 +1,7 @@
 /* Eman Eizenga
  * COSC 1337 001
- * 2023-11-02
- * Purpose: To encapsulate the idea of a music store (Lab10L1)
+ * 2023-11-03
+ * Purpose: To encapsulate the idea of a music store (Lab10L2)
  */
 package typesOfStores;
 
