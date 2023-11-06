@@ -41,17 +41,26 @@ public class GroceryStore extends Store{
 		this.annualRevenue = annualRevenue;
 	}
 
-	/**
-	 * @return the isChain
+	/**Checks to see if GroceryStore is part of a national chain
+	 * @return true iff the store is part of a national chain
 	 */
 	public boolean isChain() {
 		return isChain;
 	}
 
-	/**
+	/**Sets whether or not this store is part of a national chain
 	 * @param isChain the isChain to set
 	 */
 	public void setChain(boolean isChain) {
 		this.isChain = isChain;
+	}
+	/**Returns a string version of the GroceryStore
+	 * 
+	 * @return a String version of the GroceryStore 
+	 */
+	@Override
+	public String toString() {
+		return super.toString() + "\n\tAnnualRevenue: " + getAnnualRevenue() + 
+				"\n\tis" + (isChain()?"": " not") + " part of a national chain.";
 	}
 }
