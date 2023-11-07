@@ -27,19 +27,30 @@ public class Program3NumberConversion {
 			//initialize an integer named sum and set it to 0
 			int sum = 0;
 			//Prompt for a radix (or base) up to 16 and read it in
-			System.out.println("Enter the base to convert from: ");
+			System.out.print("Enter the base to convert from: ");
 			int radix = scanner.nextInt();
 			//Prompt for a number named inputNumber and read it in as a String (use scanner.next())
-			System.out.println("Input the number you wish to convert to decimal: ");
+			System.out.print("Input the number you wish to convert to decimal: ");
 			String inputNumber = scanner.next();
 			//Start a for loop that runs backwards through to characters of inputNumber. Do the following inside the for:
-			//Get the current character based on i
-			//Get the currentDigit based on the parseNumber of the result of the previous step
-			//Accumulate in sum the value of the digit. Make sure to compensate for the fact that your loop is running backwards.
+			for (int i = inputNumber.length() - 1; i > -1; i--)
+			{
+				//Get the current character based on i
+				char currentCharacter = inputNumber.charAt(i);
+				//Get the currentDigit based on the parseNumber of the result of the previous step
+				int currentDigit = parseNumber(currentCharacter);
+				//Accumulate in sum the value of the digit. Make sure to compensate for the fact that your loop is running backwards.
+				sum += valueOfDigit((inputNumber.length()-i-1), radix, currentDigit);
+			}//End for loop
 			//Now, just output inputNumber+" in base "+radix+" converts to "+sum+" in base 10."
+			System.out.print(inputNumber + " in base " + radix + 
+					" converts to " + sum + " in base 10. \n");
 			//Prompt the user to enter 'y' to enter another number to convert and read in their response
-			//close the scanner
+			System.out.print("Enter \"y\" to enter another number to convert: ");
+			response = scanner.next();
 		} while (response.equalsIgnoreCase("y"));
+		//close the scanner
+		scanner.close();
 	}
 
 	public static int parseNumber(char letter) 
@@ -91,7 +102,7 @@ public class Program3NumberConversion {
 
 	public static int valueOfDigit(int place, int radix, int number) {
 		int result = (int) (number*(Math.pow(radix, place)));
-		System.out.print(result+"+");
+		//System.out.print(result+"+");
 		return result;
 	}
 }
