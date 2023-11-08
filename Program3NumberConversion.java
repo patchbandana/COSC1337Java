@@ -1,8 +1,9 @@
 /*Eman Eizenga
  * COSC 1337 001
  * 2023-11-03
- * Purpose: to convert a number in some other number system (such as binary)
+ * Purpose: To convert a number in some other number system (such as binary)
  *  to decimal. The base (also known as a radix) will have a maximum of 16.
+ *  (Program 3: Number System Conversion)
  */
 package numberSystem;
 
@@ -52,7 +53,12 @@ public class Program3NumberConversion {
 		//close the scanner
 		scanner.close();
 	}
-
+	
+	/**Parses through a number to convert a character to its integer value 1-16
+	 * 
+	 * @param letter the character passed through to be processed
+	 * @return the integer value associated with 0-9, A-F
+	 */
 	public static int parseNumber(char letter) 
 	{
 		switch (letter) 
@@ -95,11 +101,17 @@ public class Program3NumberConversion {
 		case 'F':
 		case 'f':
 			return 15;
-			default:
-				return 0;
 		}
+		return 0;
 	}
 
+	/**Calculates the valueOfDigit that the user wishes to convert to base 10
+	 * 
+	 * @param place the place in the string we are currently converting
+	 * @param radix the base of the number system we are converting from
+	 * @param number the actual number being converted
+	 * @return result stores the converted number which will be added to the sum for finishing conversion
+	 */
 	public static int valueOfDigit(int place, int radix, int number) {
 		int result = (int) (number*(Math.pow(radix, place)));
 		//System.out.print(result+"+");
