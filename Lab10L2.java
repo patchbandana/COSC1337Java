@@ -3,7 +3,11 @@
  * 2023-11-06
  * Purpose: To test the GroceryStore, MusicStore, WebStore, and Store classes in
  * a polymorphic way. (Lab10L2)
- * Insight: 
+ * Insight: 1) Because MusicStore, WebStore, and GroceryStore all have an
+ *  is-a relationship with Store.
+ *  2) It always tries to call the method from the most specific class first.
+ *  If it can't find it, it looks at the superclass. If it doesn't find it
+ *  there, it will look at the next superclass, etc.
  */
 package someOtherPackage;
 
@@ -51,8 +55,9 @@ public class Lab10L2 {
 				case "W":
 				case "w":
 					System.out.print("Please enter the URL for the site: ");
-					String url = scanner.nextLine("Please enter the programming language " +
-							"of the site: ");
+					String url = scanner.nextLine();
+					System.out.print("Please enter the programming language used "
+							+ "for this website: ");
 					String programmingLanguage = scanner.nextLine();
 					temporaryStore = new WebStore(name, address, url,
 							programmingLanguage);
@@ -71,6 +76,10 @@ public class Lab10L2 {
 					temporaryStore = new GroceryStore(name, address, revenue, isChain);
 					break;
 				}//End of switch
+				stores.add(temporaryStore);
+				
+				for (Store store : stores)
+					System.out.println(store);
 			}//End of the if statement (x or X)
 		} while (!switchCondition.equalsIgnoreCase("x"));
 		scanner.close();
