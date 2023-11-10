@@ -29,45 +29,64 @@ public class Employee {
 		setEid(eid);
 	}
 
-	/**
-	 * @return the firstName
+	/**Gets the first name of the Employee
+	 * @return the firstName of the Employee
 	 */
 	public String getFirstName() {
 		return firstName;
 	}
 
-	/**
+	/**Sets the first name of the Employee
 	 * @param firstName the firstName to set
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
-	/**
-	 * @return the lastName
+	/**Gets the last name of the Employee
+	 * @return the lastName of the Employee
 	 */
 	public String getLastName() {
 		return lastName;
 	}
 
-	/**
+	/**Sets the last name of the Employee
 	 * @param lastName the lastName to set
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
-	/**
+	/**Sets the ID of the Employee
 	 * @return the eid
 	 */
 	public String getEid() {
 		return eid;
 	}
 
-	/**
+	/**Sets the ID of the Employee
 	 * @param eid the eid to set
 	 */
 	public void setEid(String eid) {
 		this.eid = eid;
 	}
+	
+	/**Return true iff the data in o is equal to this Employee
+	 * @param o the object to compare this Employee to
+	 * @return true iff the data in o is equal to this Employee
+	 */
+	@Override
+	public boolean equals(Object o) {
+		return toString().equals(o.toString());
+	}
+
+	/**Returns a String version of this Employee
+	 * @return a string representation of the Employee object
+	 */
+	@Override
+	public String toString() {
+		return "Employee: " + getFirstName() + " " + getLastName() +
+				"\nEmployee ID: " + getEid();
+	}
+	
 }
