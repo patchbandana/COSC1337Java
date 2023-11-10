@@ -19,14 +19,14 @@ public class Cube {
 	 * 
 	 */
 	public Cube() {
-		this.lengthOfSide = 1;
+		setLengthOfSide(1);
 	}
 
 	/**Constructs a Cube that takes lengthOfSide as an argument
 	 * @param lengthOfSide the length of each side
 	 */
 	public Cube(int lengthOfSide) {
-		this.lengthOfSide = lengthOfSide;
+		setLengthOfSide(lengthOfSide);
 	}
 
 	/**Gets the lengthOfSide of the Cube
@@ -60,7 +60,7 @@ public class Cube {
 	 * @return the surfaceArea of the cube (6a^2)
 	 */
 	public int getSurfaceArea(int lengthOfSide) {
-		return 6*(lengthOfSide*lengthOfSide);
+		return 6*(getLengthOfSide()*getLengthOfSide());
 	}
 
 	/**Calculates and returns the volume of a Cube
@@ -69,7 +69,7 @@ public class Cube {
 	 * @return the volume of the cube (a^3)
 	 */
 	public int getVolume(int lengthOfSide) {
-		return (lengthOfSide*lengthOfSide*lengthOfSide);
+		return (getLengthOfSide()*getLengthOfSide()*getLengthOfSide());
 	}
 
 	/**Equals method compares two Cubes to see if they are the same
