@@ -40,7 +40,8 @@ public class Cube {
 	 * @param lengthOfSide the lengthOfSide to set
 	 */
 	public void setLengthOfSide(int lengthOfSide) {
-		this.lengthOfSide = lengthOfSide;
+		if (lengthOfSide >= 0)
+			this.lengthOfSide = lengthOfSide;
 	}
 
 	/**Returns a string representation of the Cube object
@@ -78,12 +79,7 @@ public class Cube {
 	 * @return true iff the lengthOfSide of the cubes are the same
 	 */
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (!(obj instanceof Cube))
-			return false;
-		Cube other = (Cube) obj;
-		return lengthOfSide == other.lengthOfSide;
+	public boolean equals(Object o) {
+		return toString().equals(o.toString());
 	}
 }

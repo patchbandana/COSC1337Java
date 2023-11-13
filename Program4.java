@@ -4,13 +4,14 @@
  * Purpose: To practice using methods to manipulate, compare
  * and calculate the area and volume of three dimensional
  * shapes. (Program 4: Three Dimensional Shapes)
- * 
  */
 package threeDimensional;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
-/**A class for manipulating, comparing, and calculating three dimensional shapes.
+/**A class for manipulating, comparing, and calculating three dimensional shapes
+ * 	and printing them using toString.
  */
 public class Program4 {
 
@@ -20,7 +21,7 @@ public class Program4 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		Cube firstCube = new Cube();
-		System.out.println(firstCube.toString());
+		System.out.println(firstCube);
 		Cube secondCube = new Cube();
 		System.out.print("Please enter the length of the side for secondCube: ");
 		secondCube.setLengthOfSide(scanner.nextInt());
@@ -29,9 +30,9 @@ public class Program4 {
 		System.out.println("First Cube side length: " + accessorValue
 		+ " Second Cube surface area: " + secondCube.getSurfaceArea(secondCube.getLengthOfSide())
 		+ " Third Cube volume: " + thirdCube.getVolume(thirdCube.getLengthOfSide()));
-		System.out.println("First Cube: " + firstCube.toString() + 
-				" Second Cube: " + secondCube.toString() + 
-				" Third Cube: " + thirdCube.toString());
+		System.out.println("First Cube: " + firstCube + 
+				" Second Cube: " + secondCube + 
+				" Third Cube: " + thirdCube);
 		System.out.println();
 		if (firstCube.equals(secondCube))
 			System.out.println("The first and second cubes are equal!");
@@ -41,6 +42,30 @@ public class Program4 {
 			System.out.println("The first and third cubes are equal!");
 		
 		//Repeat with Spheres
+		Sphere firstSphere = new Sphere();
+		//I can remove this part if unnecessary but it made the output of the doubles much nicer
+		DecimalFormat format = new DecimalFormat("#0.00");
+		System.out.println(firstSphere);
+		Sphere secondSphere = new Sphere();
+		System.out.print("Please enter the radius of the second Sphere: ");
+		secondSphere.setRadius(scanner.nextInt());
+		System.out.println(secondSphere);
+		Sphere thirdSphere = new Sphere(3);
+		int sphereAccessorValue = firstSphere.getRadius();
+		System.out.println("First Sphere radius: " + sphereAccessorValue
+				+ " Second Sphere surface area: " + format.format(secondSphere.getSurfaceArea(secondSphere.getRadius()))
+				+ " Third Sphere volume: " + format.format(thirdSphere.getVolume(thirdSphere.getRadius())));
+		System.out.println("First Sphere: " + firstSphere + 
+				" Second Sphere: " + secondSphere + 
+				" Third Sphere: " + thirdSphere + "\n");
+		if (firstSphere.equals(secondSphere))
+			System.out.println("The first and second spheres are equal!");
+		if (secondSphere.equals(thirdSphere))
+			System.out.println("The second and third spheres are equal!");
+		if (thirdSphere.equals(firstSphere))
+			System.out.println("The first and third spheres are equal!");
+		
+		//Close the Scanner
 		scanner.close();
 	}
 
