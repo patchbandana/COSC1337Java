@@ -6,6 +6,8 @@
  */
 package threeDimensional;
 
+import java.text.DecimalFormat;
+
 /**Sphere class for testing Three Dimensional Shapes
  * @author emane
  */
@@ -18,7 +20,7 @@ public class Sphere {
 	public Sphere() {
 		setRadius(1);
 	}
-	
+
 	/**A constructor for the Sphere class that takes radius as an argument
 	 * @param radius the radius of the sphere.
 	 */
@@ -37,9 +39,25 @@ public class Sphere {
 	 * @param radius the radius to set
 	 */
 	public void setRadius(int radius) {
-		this.radius = radius;
+		//input validation
+		if (radius >= 0)
+			this.radius = radius;
 	}
 	
+	
+	/**Returns a string representation of the sphere object
+	 * 
+	 * @return a string with the Sphere's dimensions
+	 */
+	@Override
+	public String toString() {
+		//I can remove this part if unnecessary but it made the output of the doubles much nicer
+		DecimalFormat format = new DecimalFormat("#0.00");
+		return "Sphere: " + getRadius() + " Surface Area: "
+				+ format.format(getSurfaceArea(getRadius())) + " Volume: "
+				+ format.format(getVolume(getRadius()));
+	}
+
 	/**Calculates and returns the surface area of a Sphere
 	 * 
 	 * @param radius the radius to the center of the Sphere
@@ -48,7 +66,7 @@ public class Sphere {
 	public double getSurfaceArea(int radius) {
 		return (4*(Math.PI*(Math.pow(getRadius(), 2))));
 	}
-	
+
 	/**Calculates and returns the volume of a Sphere
 	 * 
 	 * @param radius the length of the radius to the center
@@ -64,12 +82,7 @@ public class Sphere {
 	 * @return true iff both Sphere objects have the same data
 	 */
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (!(obj instanceof Sphere))
-			return false;
-		Sphere other = (Sphere) obj;
-		return radius == other.radius;
+	public boolean equals(Object o) {
+		return toString().equals(o.toString());
 	}
 }
