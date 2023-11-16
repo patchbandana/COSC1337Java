@@ -54,8 +54,8 @@ public class Sphere {
 		//I can remove this part if unnecessary but it made the output of the doubles much nicer
 		DecimalFormat format = new DecimalFormat("#0.00");
 		return "Sphere: " + getRadius() + " Surface Area: "
-				+ format.format(getSurfaceArea(getRadius())) + " Volume: "
-				+ format.format(getVolume(getRadius()));
+				+ format.format(getSurfaceArea() + " Volume: "
+				+ format.format(getVolume()));
 	}
 
 	/**Calculates and returns the surface area of a Sphere
@@ -63,7 +63,7 @@ public class Sphere {
 	 * @param radius the radius to the center of the Sphere
 	 * @return the surfaceArea of the Sphere (4pi*r^2)
 	 */
-	public double getSurfaceArea(int radius) {
+	public double getSurfaceArea() {
 		return (4*(Math.PI*(Math.pow(getRadius(), 2))));
 	}
 
@@ -72,8 +72,8 @@ public class Sphere {
 	 * @param radius the length of the radius to the center
 	 * @return the volume of the cube ((4/3)*pi*r^3)
 	 */
-	public double getVolume(int radius) {
-		return ((4/3)*Math.PI*(Math.pow(getRadius(), 3)));
+	public double getVolume() {
+		return ((4.0/3.0)*Math.PI*(Math.pow(getRadius(), 3)));
 	}
 
 	/**Compares two Sphere objects to see if they are the same
