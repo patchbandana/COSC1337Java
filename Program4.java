@@ -7,7 +7,7 @@
  */
 package threeDimensional;
 
-import java.text.DecimalFormat;
+//import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**A class for manipulating, comparing, and calculating three dimensional shapes
@@ -28,11 +28,11 @@ public class Program4 {
 		Cube thirdCube = new Cube(3);
 		int accessorValue = firstCube.getLengthOfSide();
 		System.out.println("First Cube side length: " + accessorValue
-		+ " Second Cube surface area: " + secondCube.getSurfaceArea(secondCube.getLengthOfSide())
-		+ " Third Cube volume: " + thirdCube.getVolume(thirdCube.getLengthOfSide()));
+		+ "\n Second Cube surface area: " + secondCube.getSurfaceArea()
+		+ "\n Third Cube volume: " + thirdCube.getVolume());
 		System.out.println("First Cube: " + firstCube + 
-				" Second Cube: " + secondCube + 
-				" Third Cube: " + thirdCube);
+				"\nSecond Cube: " + secondCube + 
+				"\nThird Cube: " + thirdCube);
 		System.out.println();
 		if (firstCube.equals(secondCube))
 			System.out.println("The first and second cubes are equal!");
@@ -44,7 +44,7 @@ public class Program4 {
 		//Repeat with Spheres
 		Sphere firstSphere = new Sphere();
 		//I can remove this part if unnecessary but it made the output of the doubles much nicer
-		DecimalFormat format = new DecimalFormat("#0.00");
+		//DecimalFormat format = new DecimalFormat("#0.00");
 		System.out.println(firstSphere);
 		Sphere secondSphere = new Sphere();
 		System.out.print("Please enter the radius of the second Sphere: ");
@@ -53,11 +53,11 @@ public class Program4 {
 		Sphere thirdSphere = new Sphere(3);
 		int sphereAccessorValue = firstSphere.getRadius();
 		System.out.println("First Sphere radius: " + sphereAccessorValue
-				+ " Second Sphere surface area: " + format.format(secondSphere.getSurfaceArea(secondSphere.getRadius()))
-				+ " Third Sphere volume: " + format.format(thirdSphere.getVolume(thirdSphere.getRadius())));
+				+ "\nSecond Sphere surface area: " + secondSphere.getSurfaceArea()
+				+ "\nThird Sphere volume: " + thirdSphere.getVolume());
 		System.out.println("First Sphere: " + firstSphere + 
-				" Second Sphere: " + secondSphere + 
-				" Third Sphere: " + thirdSphere + "\n");
+				"\nSecond Sphere: " + secondSphere + 
+				"\nThird Sphere: " + thirdSphere + "\n");
 		if (firstSphere.equals(secondSphere))
 			System.out.println("The first and second spheres are equal!");
 		if (secondSphere.equals(thirdSphere))
@@ -68,5 +68,4 @@ public class Program4 {
 		//Close the Scanner
 		scanner.close();
 	}
-
 }

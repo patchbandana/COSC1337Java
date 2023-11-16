@@ -51,8 +51,8 @@ public class Cube {
 	@Override
 	public String toString() {
 		return "Cube: " + getLengthOfSide() + " Surface Area: "
-				+ getSurfaceArea(getLengthOfSide()) + " Volume: "
-				+ getVolume(getLengthOfSide());
+				+ getSurfaceArea() + " Volume: "
+				+ getVolume();
 	}
 
 	/**Calculates and returns the surface area of a Cube
@@ -60,7 +60,7 @@ public class Cube {
 	 * @param lengthOfSide the length of each side of the cube
 	 * @return the surfaceArea of the cube (6a^2)
 	 */
-	public int getSurfaceArea(int lengthOfSide) {
+	public int getSurfaceArea() {
 		return 6*(getLengthOfSide()*getLengthOfSide());
 	}
 
@@ -69,7 +69,7 @@ public class Cube {
 	 * @param lengthOfSide the length of each dimension
 	 * @return the volume of the cube (a^3)
 	 */
-	public int getVolume(int lengthOfSide) {
+	public int getVolume() {
 		return (getLengthOfSide()*getLengthOfSide()*getLengthOfSide());
 	}
 
