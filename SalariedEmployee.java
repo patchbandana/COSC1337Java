@@ -39,14 +39,21 @@ public class SalariedEmployee extends Employee {
 		if (salary >= 0)
 		this.salary = salary;
 	}
+	
+	/**Returns the earnings for this period for this Employee
+	 * 
+	 * @return the earnings for this period for this Employee
+	 */
+		public double getEarnings()
+		{
+			return getSalary();
+		}
 
 	/**Returns a string version of the SalariedEmployee
 	 * @return a string representation of SalariedEmployee
 	 */
 	@Override
 	public String toString() {
-		return "Salaried " + super.toString() + "\nSalary: " + getSalary();
-	}
-	
-	
+		return "Salaried " + super.toString() + "\nSalary: " + MONEY.format(getSalary());
+	}	
 }

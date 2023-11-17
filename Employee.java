@@ -1,21 +1,29 @@
 /*Eman Eizenga
  *COSC 1337 001
  *2023-11-08
- * Purpose: To encapsulate information about an Employee (Lab 10L3)
+ * Purpose: To encapsulate information about an Employee (Lab 10L4)
  */
 package employeeSystem;
+
+import java.text.NumberFormat;
 
 /**Encapsulates Employee information
  * @author emane
  * 
  */
-public class Employee {
+public abstract class Employee {
 	/**The Employee's first name*/
 	protected String firstName;
 	/**The Employee's last name*/
 	protected String lastName;
 	/**The Employee's eid*/
 	protected String eid;
+	/**Format percentages*/
+	protected static final NumberFormat PERC =
+			NumberFormat.getPercentInstance();
+	/**Format currency*/
+	protected static final NumberFormat MONEY =
+			NumberFormat.getCurrencyInstance();
 	
 	/**Creates a new Employee with input data
 	 * @param firstName the firstName of the new Employee
@@ -70,6 +78,12 @@ public class Employee {
 	public void setEid(String eid) {
 		this.eid = eid;
 	}
+		
+	/**Returns the earnings for this period for this Employee
+	 * 
+	 * @return the earnings for this period for this Employee
+	 */
+		public abstract double getEarnings();
 	
 	/**Return true iff the data in o is equal to this Employee
 	 * @param o the object to compare this Employee to
