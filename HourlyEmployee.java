@@ -1,7 +1,7 @@
 /*Eman Eizenga
  * COSC 1337 001
  * 2023-11-10
- * Purpose: To encapsulate an HourlyEmployee based on Employee (Lab10L3)
+ * Purpose: To encapsulate an HourlyEmployee based on Employee (Lab10L4)
  */
 package employeeSystem;
 
@@ -56,6 +56,15 @@ public class HourlyEmployee extends Employee {
 		if (wage >= 0)
 		this.wage = wage;
 	}
+	
+	/**Returns the earnings for this period for this Employee
+	 * 
+	 * @return the earnings for this period for this Employee
+	 */
+		public double getEarnings()
+		{
+			return getWage() * getHours();
+		}
 
 	/**Returns a String version of the HourlyEmployee
 	 * 
@@ -64,6 +73,6 @@ public class HourlyEmployee extends Employee {
 	@Override
 	public String toString() {
 		return "Hourly " + super.toString() + "\nWage: "
-				+ getWage();
+				+ MONEY.format(getWage());
 	}
 }
