@@ -24,7 +24,7 @@ public abstract class Employee {
 	/**Format currency*/
 	protected static final NumberFormat MONEY =
 			NumberFormat.getCurrencyInstance();
-	
+
 	/**Creates a new Employee with input data
 	 * @param firstName the firstName of the new Employee
 	 * @param lastName the lastName of the new Employee
@@ -78,13 +78,13 @@ public abstract class Employee {
 	public void setEid(String eid) {
 		this.eid = eid;
 	}
-		
+
 	/**Returns the earnings for this period for this Employee
 	 * 
 	 * @return the earnings for this period for this Employee
 	 */
-		public abstract double getEarnings();
-	
+	public abstract double getEarnings();
+
 	/**Return true iff the data in o is equal to this Employee
 	 * @param o the object to compare this Employee to
 	 * @return true iff the data in o is equal to this Employee
@@ -102,5 +102,5 @@ public abstract class Employee {
 		return "Employee: " + getFirstName() + " " + getLastName() +
 				"\nEmployee ID: " + getEid();
 	}
-	
+
 }
