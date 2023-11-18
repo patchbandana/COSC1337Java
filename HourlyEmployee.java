@@ -13,7 +13,7 @@ public class HourlyEmployee extends Employee {
 	protected double hours;
 	/**The Employee's pay per hour*/
 	protected double wage;
-	
+
 	/**Creates a new HourlyEmployee based on the incoming data
 	 * @param firstName The first name of the Employee
 	 * @param lastName The last name of the Employee
@@ -24,7 +24,7 @@ public class HourlyEmployee extends Employee {
 		super(firstName, lastName, eid);
 		setWage(wage);
 		setHours(0);
-		
+
 	}
 
 	/**Gets the hours of this Employee
@@ -39,7 +39,7 @@ public class HourlyEmployee extends Employee {
 	 */
 	public void setHours(double hours) {
 		if (hours >= 0)
-		this.hours = hours;
+			this.hours = hours;
 	}
 
 	/**Gets the wage of this Employee
@@ -54,17 +54,17 @@ public class HourlyEmployee extends Employee {
 	 */
 	public void setWage(double wage) {
 		if (wage >= 0)
-		this.wage = wage;
+			this.wage = wage;
 	}
-	
+
 	/**Returns the earnings for this period for this Employee
 	 * 
 	 * @return the earnings for this period for this Employee
 	 */
-		public double getEarnings()
-		{
-			return getWage() * getHours();
-		}
+	public double getEarnings()
+	{
+		return getWage() * getHours();
+	}
 
 	/**Returns a String version of the HourlyEmployee
 	 * 

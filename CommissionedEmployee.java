@@ -16,11 +16,12 @@ public class CommissionedEmployee extends Employee {
 	protected double grossSales;
 	/**The percentage the Employee gets paid of the amount he/she sold*/
 	protected double commissionRate;
-	
+
 	/**Creates a new CommissionedEmployee from the incoming data
 	 * @param firstName the first name of the Employee
 	 * @param lastName the last name of the Employee
 	 * @param eid the ID of the Employee
+	 * @param the commissionRate of the Employee
 	 */
 	public CommissionedEmployee(String firstName, String lastName, String eid, double commissionRate) {
 		super(firstName, lastName, eid);
@@ -56,16 +57,16 @@ public class CommissionedEmployee extends Employee {
 		this.commissionRate = (commissionRate >= 0 && commissionRate <=
 				1.0 ? commissionRate : 0);
 	}
-	
+
 	/**Returns the earnings for this period for this Employee
 	 * 
 	 * @return the earnings for this period for this Employee
 	 */
-		public double getEarnings()
-		{
-			return getGrossSales() * getCommissionRate();
-		}
-	
+	public double getEarnings()
+	{
+		return getGrossSales() * getCommissionRate();
+	}
+
 	/**Gets a String version of this CommissionedEmployee
 	 * 
 	 * @return a String representation of this CommissionedEmployee

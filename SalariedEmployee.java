@@ -37,17 +37,17 @@ public class SalariedEmployee extends Employee {
 	 */
 	public void setSalary(double salary) {
 		if (salary >= 0)
-		this.salary = salary;
+			this.salary = salary;
 	}
-	
+
 	/**Returns the earnings for this period for this Employee
 	 * 
 	 * @return the earnings for this period for this Employee
 	 */
-		public double getEarnings()
-		{
-			return getSalary();
-		}
+	public double getEarnings()
+	{
+		return getSalary();
+	}
 
 	/**Returns a string version of the SalariedEmployee
 	 * @return a string representation of SalariedEmployee
