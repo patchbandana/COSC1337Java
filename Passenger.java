@@ -5,6 +5,8 @@
  */
 package trainsDemo;
 
+import java.util.Objects;
+
 /**Encapsulates information about an individual passenger, including
  * the passenger's name and whether or not the bought a first class
  * ticket.
@@ -52,6 +54,15 @@ public class Passenger {
 	public void setFirstClass(boolean isFirstClass) {
 		this.isFirstClass = isFirstClass;
 	}
-	
+
+	/**Returns true if the two Passengers are considered equal
+	 * 
+	 * @param o the object to compare this passenger to
+	 * @return true iff the two Passengers are to be considered equal
+	 */
+	@Override
+	public boolean equals(Object o) {
+		return toString().equals(o.toString());
+	}
 	
 }
