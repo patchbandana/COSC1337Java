@@ -5,8 +5,6 @@
  */
 package trainsDemo;
 
-import java.util.Objects;
-
 /**Encapsulates information about an individual passenger, including
  * the passenger's name and whether or not the bought a first class
  * ticket.
@@ -63,6 +61,15 @@ public class Passenger {
 	@Override
 	public boolean equals(Object o) {
 		return toString().equals(o.toString());
+	}
+	
+	/**Returns a String version of this Passenger
+	 * 
+	 * @return a String representation of this Passenger
+	 */
+	@Override
+	public String toString() {
+		return getName() + "\t\t" + (isFirstClass()?"!":"");
 	}
 	
 }
