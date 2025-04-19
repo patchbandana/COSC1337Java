@@ -1,0 +1,30 @@
+TA Notes:
+
+How to on assignment 4:
+0. Sort everything into its proper project/folder
+1. create data directory in eclipse-workspace
+2. plan out map
+3. create characters (5+ no commas)
+4. create map (20+ no commas)
+5. create items (only after characters.csv are updated 5-10)
+6. Implement Get Item functionality:
+	In the actionHandler method, improve the 'd' case to handle non-existent items
+	Make sure the dropItem method works correctly
+	
+	For the 'g' (get) command:
+
+		Added a check to see if the item exists in the current map block
+		Added an error message when the item doesn't exist: "There is no [item name] here to get."
+		Only attempts to get the item if it exists
+
+
+For the 'd' (drop) command:
+
+		Added a check to see if the item exists in the player's inventory
+		Added an error message when the item doesn't exist: "You don't have a [item name] in your inventory."
+		Stored the item in a variable before removing it from inventory to use in the confirmation message
+		Updated the confirmation message to: "You have dropped the [item name]"
+
+
+
+	These changes ensure that when a player tries to get or drop an item that doesn't exist, they'll receive an appropriate error message rather than encountering an error or unexpected behavior.
