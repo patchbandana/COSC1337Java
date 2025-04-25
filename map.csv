@@ -1,21 +1,90 @@
-5,5,Home,This is our loving home,1,1,1,1
-6,6,Garden Plot A,The first Garden Plot,0,1,1,1
-7,6,Garden Plot B,The second Garden plot,0,1,1,1
-8,6,Garden Plot C,The third Garden plot,0,1,1,1
-10,0,Seed Shop,NRGeneral Store,1,0,0,1
-9,2,Workbench,Build and expand farm,1,1,1,1
-5,6,Kitchen,Cook and eat dishes here,0,1,0,1
-4,6,Bedroom,Sleep and dream here,0,0,1,0
-4,4,Journal,Read journal from here,1,1,1,1
-3,4,Backpack,Organize inventory here,1,1,1,1
-9,6,Greenhouse/SeedRoom,Must be built. Trim plants and more!,0,1,1,1
-3,7,Fence,3,0,1,0,0
-4,7,Fence,Blocks progression and sometimes numbers for a description,0,0,0,0
-5,7,Fence,Blocked,0,0,0,0
-6,7,Fence,Blocked till you expand your farm,0,1,0,0
-7,7,Fence,Expand your farm,0,1,0,0
-8,7,Fence,Expand?,0,1,1,0
-8,0,Empty Field,empty,1,0,1,1
-9,0,Empty Field,empty,1,0,1,1
-10,1,Empty field,empty,1,1,0,1
-10,2,Empty field,empty,1,1,0,1
+0,0,Dell City Gate,The main entrance to the city.,0,1,1,0
+0,1,Empty Field,An open area with short grass.,1,1,1,0
+0,2,Empty Field,An open area with short grass.,1,0,1,0
+0,3,Empty Field,An open area with short grass.,1,1,1,0
+0,4,Empty Field,An open area with short grass.,1,0,1,0
+1,0,Empty Field,An open area with short grass.,0,1,1,1
+1,1,Empty Field,An open area with short grass.,1,1,1,1
+1,2,Empty Field,An open area with short grass.,1,1,1,1
+1,3,Empty Field,An open area with short grass.,1,1,1,1
+1,4,Empty Field,An open area with short grass.,1,0,1,0
+2,0,Empty Field,An open area with short grass.,0,1,1,1
+2,1,Empty Field,An open area with short grass.,1,1,1,1
+2,2,Empty Field,An open area with short grass.,1,1,1,1
+2,3,Empty Field,An open area with short grass.,1,1,1,1
+2,4,Empty Field,An open area with short grass.,1,0,1,1
+2,5,Empty Field,An open area with short grass.,1,1,1,0
+2,6,Empty Field,An open area with short grass.,1,1,1,0
+2,7,Empty Field,An open area with short grass.,1,1,1,0
+2,8,Empty Field,An open area with short grass.,1,1,0,0
+2,9,Empty Field,An open area with short grass.,1,0,0,0
+3,0,Empty Field,An open area with short grass.,0,1,1,1
+3,1,Empty Field,An open area with short grass.,1,1,1,1
+3,2,Empty Field,An open area with short grass.,1,1,1,1
+3,3,Empty Field,An open area with short grass.,1,1,1,1
+3,4,Backpack,An old backpack lies abandoned on the ground.,1,1,1,1
+3,5,Empty Field,An open area with short grass.,1,1,1,1
+3,6,Empty Field,An open area with short grass.,1,1,1,1
+3,7,Fence,A wooden fence marks the boundary of a property.,1,0,1,1
+3,8,Empty Field,An open area with short grass.,1,1,1,0
+3,9,Empty Field,An open area with short grass.,1,0,1,0
+4,0,Empty Field,An open area with short grass.,0,1,1,1
+4,1,Empty Field,An open area with short grass.,1,1,1,1
+4,2,Empty Field,An open area with short grass.,1,1,1,1
+4,3,Empty Field,An open area with short grass.,1,1,1,1
+4,4,Journal,An old journal lies open on a flat rock.,1,1,1,1
+4,5,Empty Field,An open area with short grass.,1,1,1,1
+4,6,Empty Field,An open area with short grass.,1,1,1,1
+4,7,Fence,A wooden fence marks the boundary of a property.,1,0,1,1
+4,8,Empty Field,An open area with short grass.,1,1,1,1
+4,9,Empty Field,An open area with short grass.,1,0,1,1
+5,0,Empty Field,An open area with short grass.,0,1,1,1
+5,1,Empty Field,An open area with short grass.,1,1,1,1
+5,2,Empty Field,An open area with short grass.,1,1,1,1
+5,3,Empty Field,An open area with short grass.,1,1,1,1
+5,4,Empty Field,An open area with short grass.,1,1,1,1
+5,5,Home,Our loving home.,1,1,1,1
+5,6,Kitchen,A cozy kitchen with a wood-burning stove.,1,1,1,1
+5,7,Fence,A wooden fence marks the boundary of a property.,1,0,1,1
+5,8,Empty Field,An open area with short grass.,1,1,1,1
+5,9,Empty Field,An open area with short grass.,1,0,1,1
+6,0,Empty Field,An open area with short grass.,0,1,1,1
+6,1,Empty Field,An open area with short grass.,1,1,1,1
+6,2,Empty Field,An open area with short grass.,1,1,1,1
+6,3,Empty Field,An open area with short grass.,1,1,1,1
+6,4,Empty Field,An open area with short grass.,1,1,1,1
+6,5,Bedroom,A small bedroom with a comfortable-looking bed.,1,1,1,1
+6,6,Empty Field,An open area with short grass.,1,1,1,1
+6,7,Fence,A wooden fence marks the boundary of a property.,1,0,1,1
+6,8,Empty Field,An open area with short grass.,1,1,1,1
+6,9,Empty Field,An open area with short grass.,1,0,0,1
+7,0,Empty Field,An open area with short grass.,0,1,1,1
+7,1,Empty Field,An open area with short grass.,1,1,1,1
+7,2,Empty Field,An open area with short grass.,1,1,1,1
+7,3,Empty Field,An open area with short grass.,1,1,1,1
+7,4,Empty Field,An open area with short grass.,1,1,1,1
+7,5,Empty Field,An open area with short grass.,1,1,1,1
+7,6,Empty Field,An open area with short grass.,1,1,1,1
+7,7,Fence,A wooden fence marks the boundary of a property.,1,0,1,1
+7,8,Empty Field,An open area with short grass.,1,0,0,1
+7,9,Empty Field,An open area with short grass.,1,0,0,1
+8,0,Empty Field,An open area with short grass.,0,0,1,1
+8,1,Empty Field,An open area with short grass.,1,1,1,1
+8,2,Empty Field,An open area with short grass.,1,1,1,1
+8,3,Empty Field,An open area with short grass.,1,1,1,1
+8,4,Empty Field,An open area with short grass.,1,1,1,1
+8,5,Garden Plot A,A prepared garden plot ready for planting.,1,1,1,1
+8,6,Seed Shop,A shop selling various seeds and gardening supplies.,1,1,0,1
+8,7,Fence,A wooden fence marks the boundary of a property.,1,0,0,1
+8,8,Empty Field,An open area with short grass.,1,1,0,1
+8,9,Empty Field,An open area with short grass.,1,0,0,1
+9,0,Empty Field,An open area with short grass.,0,0,0,1
+9,1,Empty Field,An open area with short grass.,1,1,0,1
+9,2,Workbench,A solid wooden workbench with various tools.,1,1,0,1
+9,3,Empty Field,An open area with short grass.,1,1,0,1
+9,4,Empty Field,An open area with short grass.,1,1,0,1
+9,5,Empty Field,An open area with short grass.,1,1,0,1
+9,6,Greenhouse/SeedRoom,A glass building filled with plant seedlings.,1,0,0,1
+9,7,Empty Field,An open area with short grass.,1,0,0,1
+9,8,Empty Field,An open area with short grass.,1,0,0,1
+9,9,Empty Field,An open area with short grass.,1,0,0,1
