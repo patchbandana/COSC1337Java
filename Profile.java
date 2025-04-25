@@ -9,13 +9,15 @@ public class Profile {
 	private String race;
 	private String cClass;
 	private short strength;
-	private short dexterity;
 	private short intelligence;
+	private short dexterity;
 	private short armor;
 	protected short hitPoints;
-	private short combative;  // 1 - yes, 0 - no
+	private short combative; // 1 is yes and 2 is no (for now)
 	
-	private Item armedWith;
+	private Item armOWith;
+	private Item armDWith;
+	
 	
 	ArrayList<Item> inventory = new ArrayList<>();
 	
@@ -24,7 +26,7 @@ public class Profile {
 		
 	}
 	
-	public Profile(short x, short y, String n, String d, String r, String c, short h, short s, short dx, short i, short a, short com)
+	public Profile(short x, short y,String n, String d, String r, String c, short h, short s, short dx, short i, short a, short comb)
 	{
 		xpos = x;
 		ypos = y;
@@ -37,13 +39,10 @@ public class Profile {
 		dexterity = dx;
 		intelligence = i;
 		armor = a;
-		combative = com;
+		combative = comb;
 		
-		armedWith = new Item();
-		
-		
-		
-		// System.out.println("New profile created: " + name + "\nPosition: " + xpos + "," + ypos);
+		armOWith = new Item();
+		armDWith = new Item();
 	}
 	
 	public boolean takeHit(int damage)
@@ -51,14 +50,12 @@ public class Profile {
 		boolean alive = true;
 		
 		hitPoints -= damage;
-		
 		if(hitPoints <= 0)
 		{
 			alive = false;
 		}
 		
 		return alive;
-		
 	}
 	
 	public boolean isHere(Profile p)
@@ -71,14 +68,13 @@ public class Profile {
 		{
 			return false;
 		}
-		
 	}
 	
 	public boolean hit(Profile p)
 	{
 		int roll = Die.roll(20);
 		
-		if (roll > p.getArmor())
+		if(roll > p.getArmor())
 		{
 			return true;
 		}
@@ -91,43 +87,71 @@ public class Profile {
 	public void kill()
 	{
 		combative = 0;
-		name = "Body of " + name;
+		name = "The Body of " + name;
 		
 	}
 	
 	public boolean isCombative()
 	{
-		if(combative == 1)
-		{
-			return true;
-		}
-		else
+		if(combative == 0)
 		{
 			return false;
 		}
-	}
-	
-	public void arm(Item i)
-	{
-		strength += i.offense;
-		armor += i.defense;
-//how have both offense weapon and defense weapon?
-		armedWith = i;
+		else
+		{
+			return true;
+		}
 	}
 
-	public void disarm()
+	public void armO(Item i)
 	{
-		strength -= armedWith.offense;
-		armor -= armedWith.defense;
-		
-		armedWith = null;
+		strength += i.offense;
+		armOWith = i;
+	}
+	public void armD(Item i)
+	{
+		armor += i.defense;
+		armDWith = i;
 	}
 	
+	public void disarmO()
+	{
+		strength -= armOWith.offense;
+		
+		armOWith = null;
+	}
+	public void disarmD()
+	{
+		armor -= armDWith.defense;
+		
+		armDWith = null;
+	}
+	public void use(Item i)
+	{
+		if(i.offense > 0)
+		{
+			if(armOWith != null)
+			{
+				strength -= armOWith.offense;
+			}
+			strength += i.offense;
+			armOWith = i;
+		}
+		if(i.defense > 0)
+		{
+			if(armDWith != null)
+			{
+				armor -= armDWith.defense;
+			}
+			armor += i.defense;
+			armDWith = i;
+		}
+	}
 	public void setName(String n)
 	{
 		name = n;
 	}
-
+	
 	public void setDesc(String d)
 	{
 		description = d;
@@ -153,9 +177,9 @@ public class Profile {
 		strength = s;
 	}
 	
-	public void setDexterity(short d)
+	public void setDexterity(short dx) 
 	{
-		dexterity = d;
+		dexterity = dx;
 	}
 	
 	public void setIntelligence(short i)
@@ -167,51 +191,41 @@ public class Profile {
 	{
 		armor = a;
 	}
-
 	public String getName()
 	{
 		return name;
 	}
-	
 	public String getDesc()
 	{
 		return description;
 	}
-	
 	public String getRace()
 	{
 		return race;
 	}
-
 	public String getcClass()
 	{
 		return cClass;
 	}
-
+	
 	public short getHitPoints()
 	{
 		return hitPoints;
 	}
-
 	public short getStrength()
 	{
 		return strength;
 	}
-
 	public short getDexterity()
 	{
 		return dexterity;
 	}
-
 	public short getIntelligence()
 	{
 		return intelligence;
 	}
-
 	public short getArmor()
 	{
 		return armor;
 	}
-
-
 }

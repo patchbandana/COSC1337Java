@@ -1,10 +1,10 @@
 -1,0,Mammoth Sunflowr Seed,The first seed you ever receive. Restores 1 NRG if eaten. But you should plant this one.,0,0,5.00
 6,5,Watering Can,This is used to water the garden. Some plants are thirstier than others.,1,1,10.00
 7,5,Gardening Gloves,These are used to weed the garden. Hard work!,1,2,10.00
-10,0,Zinnia Seed,This item must be purchased at a seed shop. Not every seed is edible!,-1,-1,10.00
+5,5,Zinnia Seed,This item must be purchased at a seed shop. Not every seed is edible!,0,0,10.00
 -1,1,Italian White Sunflowr Seed,First given to you by Baby Doll after giving him your first flower. Restores 5 NRG if eaten. But you should plant this one.,0,0,15.00
 -1,1,Velvet Queen Sunflowr Seed,First given to you by Baby Doll after first expanding the farm. Restores 10 NRG if eaten. But you should plant this one.,2,2,20.00
-10,0,Autumn Beauty Sunflowr Seed,First given to you by Baby Doll at the seed shop after advancing past day 30. Restored 25 NRG if eaten. But you should plant this one.,0,5,25.00
-10,0,Marigold Seed,Must be purchased at the seed shop. Inedible.,0,0,30.00
-10,0,Sweet Alyssum Seed,Must be purchased at the seed shop. Edible.,0,0,35.00
+8,5,Autumn Beauty Sunflowr Seed,First given to you by Baby Doll at the seed shop after advancing past day 30. Restored 25 NRG if eaten. But you should plant this one.,0,5,25.00
+8,6,Marigold Seed,Must be purchased at the seed shop. Inedible.,0,0,30.00
+9,6,Sweet Alyssum Seed,Must be purchased at the seed shop. Edible.,0,0,35.00
 -1,4,Nasturtium Seed,First unearthed by Sun Zi after doubling the farm's size. Great work! You should plant this one.,0,0,40.00
